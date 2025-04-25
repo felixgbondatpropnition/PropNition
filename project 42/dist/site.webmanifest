@@ -1,0 +1,19 @@
+{
+  "name": "Propnition - Real Estate Tokenization Platform",
+  "short_name": "Propnition",
+  "icons": [
+    {
+      "src": "https://gwmhielostbvxelbvcjf.supabase.co/storage/v1/object/public/logos//Propnition.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://gwmhielostbvxelbvcjf.supabase.co/storage/v1/object/public/logos//Propnition.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#005F40",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
