@@ -1,0 +1,321 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 16px; /* Base font size */
+}
+
+body {
+  @apply antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Mobile-first responsive design */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .container {
+    @apply px-4;
+  }
+  
+  h1 {
+    @apply text-2xl;
+  }
+  
+  h2 {
+    @apply text-xl;
+  }
+  
+  h3 {
+    @apply text-lg;
+  }
+}
+
+/* Grid pattern background */
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Typography responsive adjustments */
+.prose {
+  @apply max-w-none;
+}
+
+.prose pre {
+  @apply bg-gray-900 text-gray-100 rounded-lg p-4 overflow-x-auto text-sm md:text-base;
+}
+
+.prose code {
+  @apply bg-gray-100 text-gray-900 px-1 py-0.5 rounded text-sm md:text-base;
+}
+
+.prose h1 {
+  @apply text-2xl md:text-3xl font-bold mb-4 md:mb-6;
+}
+
+.prose h2 {
+  @apply text-xl md:text-2xl font-semibold mt-6 md:mt-8 mb-3 md:mb-4;
+}
+
+.prose h3 {
+  @apply text-lg md:text-xl font-semibold mt-4 md:mt-6 mb-2 md:mb-3;
+}
+
+.prose p {
+  @apply mb-3 md:mb-4 text-sm md:text-base;
+}
+
+.prose ul {
+  @apply list-disc list-inside mb-3 md:mb-4;
+}
+
+.prose li {
+  @apply mb-1 md:mb-2 text-sm md:text-base;
+}
+
+/* Mobile-first responsive tables */
+.responsive-table {
+  @apply w-full overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0;
+}
+
+.responsive-table table {
+  @apply min-w-full;
+}
+
+/* Mobile-first cards */
+.card-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6;
+}
+
+/* Mobile-first navigation */
+.nav-menu {
+  @apply flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4;
+}
+
+/* Mobile-first forms */
+.form-group {
+  @apply space-y-1 md:space-y-2;
+}
+
+.form-label {
+  @apply text-sm md:text-base font-medium;
+}
+
+.form-input {
+  @apply w-full text-sm md:text-base;
+}
+
+/* Responsive charts container */
+.chart-container {
+  @apply h-48 md:h-64 lg:h-80;
+}
+
+/* Animation for scroll indicator */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+
+/* Mobile-first padding and margins */
+.section-padding {
+  @apply py-4 md:py-8 px-4 md:px-6;
+}
+
+.content-margin {
+  @apply my-4 md:my-6;
+}
+
+/* Responsive text sizes */
+.text-responsive {
+  @apply text-sm md:text-base;
+}
+
+.heading-responsive {
+  @apply text-lg md:text-xl lg:text-2xl;
+}
+
+/* Responsive buttons */
+.btn {
+  @apply px-3 md:px-4 py-2 md:py-3 text-sm md:text-base;
+}
+
+/* Responsive icons */
+.icon-responsive {
+  @apply h-4 w-4 md:h-5 md:w-5;
+}
+
+/* Responsive grid layouts */
+.grid-responsive {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6;
+}
+
+/* Responsive flex layouts */
+.flex-responsive {
+  @apply flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4;
+}
+
+/* Responsive padding for navigation */
+.nav-padding {
+  @apply px-4 md:px-6 py-2 md:py-3;
+}
+
+/* Responsive margins for sections */
+.section-margin {
+  @apply my-6 md:my-8 lg:my-12;
+}
+
+/* Responsive container width */
+.container-responsive {
+  @apply w-full max-w-7xl mx-auto px-4 md:px-6;
+}
+
+/* Responsive chart containers */
+.chart-wrapper {
+  @apply w-full overflow-x-auto overflow-y-hidden;
+}
+
+/* Responsive alerts and notifications */
+.alert-responsive {
+  @apply p-3 md:p-4 text-sm md:text-base;
+}
+
+/* Responsive modals */
+.modal-responsive {
+  @apply p-4 md:p-6 max-w-sm md:max-w-md lg:max-w-lg mx-auto;
+}
+
+/* Responsive tables */
+.table-responsive {
+  @apply min-w-full divide-y divide-gray-200;
+}
+
+.table-cell-responsive {
+  @apply px-3 md:px-4 py-2 md:py-3 text-sm md:text-base;
+}
+
+/* Responsive form elements */
+.input-responsive {
+  @apply px-3 md:px-4 py-2 md:py-3 text-sm md:text-base;
+}
+
+.select-responsive {
+  @apply px-3 md:px-4 py-2 md:py-3 text-sm md:text-base;
+}
+
+/* Responsive card layouts */
+.card-responsive {
+  @apply p-4 md:p-6 rounded-lg;
+}
+
+/* Responsive tooltips */
+.tooltip-responsive {
+  @apply text-xs md:text-sm max-w-xs md:max-w-sm;
+}
+
+/* Responsive badges */
+.badge-responsive {
+  @apply px-2 md:px-3 py-1 text-xs md:text-sm;
+}
+
+/* Responsive dividers */
+.divider-responsive {
+  @apply my-4 md:my-6;
+}
+
+/* Responsive spacing utilities */
+.gap-responsive {
+  @apply gap-4 md:gap-6;
+}
+
+.space-responsive {
+  @apply space-y-4 md:space-y-6;
+}
+
+/* Responsive text alignment */
+.text-align-responsive {
+  @apply text-left md:text-center;
+}
+
+/* Responsive borders */
+.border-responsive {
+  @apply border-0 md:border;
+}
+
+/* Responsive shadows */
+.shadow-responsive {
+  @apply shadow-sm md:shadow;
+}
+
+/* Responsive border radius */
+.rounded-responsive {
+  @apply rounded-md md:rounded-lg;
+}
+
+/* Responsive background colors */
+.bg-responsive {
+  @apply bg-white md:bg-gray-50;
+}
+
+/* Responsive overlays */
+.overlay-responsive {
+  @apply bg-black bg-opacity-50 md:bg-opacity-75;
+}
+
+/* Responsive transitions */
+.transition-responsive {
+  @apply transition-all duration-200 md:duration-300;
+}
+
+/* Mobile navigation adjustments */
+@media (max-width: 640px) {
+  .nav-links {
+    @apply flex-wrap justify-center;
+  }
+  
+  .nav-link {
+    @apply text-sm py-1 px-2;
+  }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 640px) {
+  .mobile-scroll {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .mobile-text {
+    @apply text-base leading-relaxed;
+  }
+  
+  .mobile-heading {
+    @apply text-2xl leading-tight;
+  }
+  
+  .mobile-container {
+    @apply px-4 py-3;
+  }
+}
+
+/* Logo filter for white color */
+.logo-white {
+  filter: brightness(0) invert(1);
+}
